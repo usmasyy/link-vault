@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkVault - Personal Bookmark Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LinkVault by <span>usama hsnn</span></h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search links...">
+            </div>
+        </header>
+
+        <main>
+            <section class="add-link-section">
+                <form id="addLinkForm">
+                    <input type="url" id="linkUrl" placeholder="Enter URL" required>
+                    <input type="text" id="linkTitle" placeholder="Enter title">
+                    <input type="text" id="linkTags" placeholder="Tags (comma-separated)">
+                    <button type="submit">Add Link</button>
+                </form>
+            </section>
+
+            <section class="links-container">
+                <div class="categories-sidebar">
+                    <h3>Categories</h3>
+                    <ul id="categoryList"></ul>
+                </div>
+                <div class="links-display" id="linksDisplay"></div>
+            </section>
+        </main>
+
+        <footer>
+            <button id="exportBtn">Export Links</button>
+            <input type="file" id="importInput" accept=".json">
+            <button id="importBtn">Import Links</button>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
